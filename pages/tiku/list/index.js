@@ -137,7 +137,7 @@ Page({
       pageSize,
       status: 2,
       ...query,
-      leafNodeIds: query.leafNodeIds || this.data.userInfo.grades[0],
+      leafNodeIds: query.leafNodeIds || (this.data.userInfo.grades.length > 0 ? this.data.userInfo.grades[0] : ''),
     }).then(res => {
       console.log(callKey, res)
       if (res.code < 300) {
