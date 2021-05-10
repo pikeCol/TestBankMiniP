@@ -1,0 +1,67 @@
+/* pages/tiku/detail/index.wxss */
+.header {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #D8D8D8;
+}
+.header .tree{
+  font-size: 32rpx;
+  color:#969696
+}
+.header .line{
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  font-size: 32rpx;
+  
+}
+.question {
+  padding: 10px;
+  border-bottom: 1px dotted #D8D8D8;
+  background-color: white;
+}
+
+.tags {
+  display: flex;
+}
+
+.tag {
+  padding: 0 10px;
+  color: #09BB07;
+  border: 1px solid #09BB07;
+  font-size: 30rpx;
+  border-radius: 3px;
+}
+
+.answer {
+  padding: 10px;
+}
+
+.question-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  font-size: 32rpx;
+}
+
+.tools {
+  text-align: right;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+.tools button {
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+  border-radius: 15rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  padding: 0 20rpx;
+  color: #FFFFFF;
+  width: auto !important;
+  margin-left: 15rpx;
+}

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/zuoye/list/zuoye",
+    "pages/logs/logs",
+    "pages/zuoye/detail/index",
+    "pages/zuoye/create/index",
+    "pages/zuoye/paperSelect/index",
+    "pages/zuoye/bigQuestionSet/index",
+    "pages/zuoye/selectQuesitons/index",
+    "pages/zuoye/bigQuetionDetail/index",
+    "pages/tiku/list/index",
+    "pages/tiku/wrongPage/index",
+    "pages/mine/info/index",
+    "pages/tiku/detail/index",
+    "pages/mine/setting/index",
+    "pages/login/index",
+    "pages/zuoye/filterPage/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "作业小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "作业卷",
+        "pagePath": "pages/zuoye/list/zuoye",
+        "iconPath": "/pages/assets/tabbar/zuoyej-noselect.png",
+        "selectedIconPath": "/pages/assets/tabbar/zuoyej-select.png"
+      },
+      {
+        "text": "题库",
+        "pagePath": "pages/tiku/list/index",
+        "iconPath": "/pages/assets/tabbar/tiku-noselect.png",
+        "selectedIconPath": "/pages/assets/tabbar/tiku-select.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/info/index",
+        "iconPath": "/pages/assets/tabbar/wode-noselect.png",
+        "selectedIconPath": "/pages/assets/tabbar/wode-select.png"
+      }
+    ]
+  }
+}

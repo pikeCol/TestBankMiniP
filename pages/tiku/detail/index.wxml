@@ -1,0 +1,30 @@
+<!--pages/tiku/detail/index.wxml-->
+<view class="question-area">
+	<view class="header">
+		<view class="tree">{{detail.subjectTreeFullNames ? detail.subjectTreeFullNames[0] : ''}}</view>
+		<view class="line">
+			<view>
+				{{contentEnum[detail.type]}} * 难度{{detail.difficultyLevel}}
+			</view>
+			<view class="tags">
+				<view wx:for="{{detail.tags}}" class="tag">{{item.value}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="question">
+		<rich-text nodes="{{detail.question}}"></rich-text>
+		<rich-text wx:for="{{detail.options}}" nodes="{{item}}"></rich-text>
+
+
+	</view>
+
+	<view class="answer">
+		<view>答案：</view>
+		<rich-text nodes="{{detail.answer}}"></rich-text>
+		<rich-text nodes="{{detail.analysis}}"></rich-text>
+	</view>
+</view>
+<view class="tools">
+	<button size="mini" bindtap="collect">收藏</button>
+	<button size="mini" bindtap="support">纠错</button>
+</view>

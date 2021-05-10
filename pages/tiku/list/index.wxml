@@ -1,0 +1,19 @@
+<view class="content">
+		<!-- <view class="custom-navigation">
+		<text bindtap="changeListType" class="navigation-btn">{{isMine ? "公共题库" : "我的题库"}}</text>
+		<text class="navigation-title">{{isMine ? "我的题库" : "公共题库"}}</text>
+		<text class="navigation-btn-right">公共题库</text>
+	</view> -->
+		<!-- <view>
+		<SearchBar class="header" bindTap="onTap" placeholder="搜索作业卷名或创建者名字" bindselectresult="selectResult" search="{{search}}" />
+	</view> -->
+		<view class="header">
+				<view class="btn" bindtap="toFilterPage">
+						<image src="../../assets/shaixuan.png" class=""></image>
+						筛选
+				</view>
+		</view>
+		<PullScroll class="table" bindrefresh="refresh" bindloadMore="toLoad" refreshing="{{refreshing}}" showLoadMore="{{showLoadMore}}" loading="{{loading}}">
+				<q-cell id="{{item.id}}" data-cell="{{item}}" wx:key="{{item.id}}" wx:for="{{list}}" data="{{item}}" class="cell" bindtap="cellTap"></q-cell>
+		</PullScroll>
+</view>

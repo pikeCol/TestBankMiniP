@@ -1,0 +1,13 @@
+.scroll-view {
+  height: 100%;
+}
+.loadMore {
+  background-color: transparent;
+  height: 45rpx;
+}
+.loadMore .wx_loading_view {
+  height: 100%;
+}
+.hidden {
+  visibility: hidden;
+}

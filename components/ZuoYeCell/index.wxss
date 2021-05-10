@@ -1,0 +1,43 @@
+/* components/ZuoYeCell/index.wxss */
+.cell-content {
+  border-bottom: 1rpx solid #CCCCCC;
+  background-color: white;
+}
+
+.left {}
+
+.right {
+  padding-top: 25rpx;
+}
+
+.type {
+  border: solid 1px #BFBFBF;
+  color: #BFBFBF;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+
+.cell-content .left .title {
+  font-size: 34rpx;
+}
+
+.cell-content .left .des {
+  font-size: 32rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.cell-content .right .des {
+  font-size: 28rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.cell-content .right .num {
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 1);
+}
+.cell-content .space {
+  margin-bottom: 10rpx;
+}

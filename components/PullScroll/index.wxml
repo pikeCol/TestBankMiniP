@@ -1,0 +1,8 @@
+<scroll-view class="scroll-view" scroll-y="{{true}}" refresher-enabled refresher-triggered="{{refreshing}}" bindrefresherrefresh="refresh" lower-threshold="1" bindscrolltolower="loadMore">
+	<slot></slot>
+	<!-- <view wx:if="{{showLoadMore}}" class="loadMore">加载更多</view> -->
+	<view class="loadMore">
+		<mp-loading class="{{  loading ? '': 'hidden'}}" type="dot-gray" animated="{{true}}"></mp-loading>
+	</view>
+
+</scroll-view>

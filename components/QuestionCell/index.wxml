@@ -1,0 +1,25 @@
+<!--components/QuestionCell/index.wxml-->
+
+<view class="question">
+	<view class="tree">{{data.subjectTreeFullNames ? data.subjectTreeFullNames[0] : ''}}</view>
+	<rich-text nodes="{{data.question}}"></rich-text>
+	<!-- <rich-text wx:for="{{data.options}}" nodes="{{item}}"></rich-text>
+	<rich-text nodes="{{data.analysis}}"></rich-text> -->
+	<view class="tags">
+		<view wx:for="{{data.tags}}" class="tag">{{item.value}}</view>
+	</view>
+	<view class="line">
+		<text>
+		{{contentEnum[data.type]}} * 难度{{data.difficultyLevel}}
+		</text>
+		<view class="line">
+			<text>
+    收藏：<text class="num">{{data.favorityCount || 0}}</text>
+			</text>
+			<text>  </text>
+			<text>
+    引用：<text class="num">0</text>
+			</text>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,18 @@
+<view>
+	<view>
+		<mp-form id="form" rules="{{rules}}" models="{{formData}}">
+			<mp-cells>
+				<mp-cell show-error prop="name" title="名称*" ext-class="">
+					<input bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入名称" value="{{formData.name}}"/>
+				</mp-cell>
+				<mp-cell show-error prop="score" title="分值*" ext-class="">
+					<input bindinput="formInputChange" data-field="score" class="weui-input" placeholder="请输入分值" value="{{formData.score}}"/>
+				</mp-cell>
+			</mp-cells>
+		</mp-form>
+	</view>
+	<view class="weui-btn-area">
+		<button class="weui-btn " type="primary" bindtap="submitForm">保存</button>
+	</view>
+
+</view>

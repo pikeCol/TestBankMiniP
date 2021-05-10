@@ -1,0 +1,53 @@
+.content {
+  background-color: white;
+}
+
+.content .label {
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #D8D8D8;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.content .label .space {
+  margin-right: 8px
+}
+
+.content .label .img-right {
+  width: 8px;
+  height: 13px;
+}
+
+.content .label .img {
+  width: 13px;
+  height: 13px;
+}
+
+.content .label .right {
+  display: flex;
+}
+
+.content .label .img-down {
+  width: 13px;
+  height: 8px;
+}
+
+.content .question {
+  padding: 10px;
+  border-bottom: 1px dotted #D8D8D8;
+  background-color: white;
+}
+
+.content .tags {
+  display: flex;
+}
+
+.content .tag {
+  padding: 0 10px;
+  color: #09BB07;
+  border: 1px solid #09BB07;
+  font-size: 30rpx;
+  border-radius: 3px;
+}

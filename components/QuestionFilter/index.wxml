@@ -1,0 +1,56 @@
+<view class="question-filter">
+	<view class="form">
+		<mp-form id="form" rules="{{rules}}" models="{{formData}}">
+			<mp-cells>
+				<mp-cell show-error prop="subject" title="科目" ext-class="">
+					<picker bindchange="bindPickerChange" data-field="subject" range-key="name" value="{{selectIndex.subject}}" range="{{ranges.subject}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.subject[selectIndex.subject].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="version" title="教材版本" ext-class="">
+					<picker bindchange="bindPickerChange" data-field="version" range-key="name" value="{{selectIndex.version}}" range="{{ranges.version}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.version[selectIndex.version].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="class" title="年级" ext-class="">
+					<picker bindchange="bindPickerChange" data-field="class" range-key="name" value="{{selectIndex.class}}" range="{{ranges.class}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.class[selectIndex.class].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="unit" title="单元" ext-class="">
+					<picker bindchange="bindPickerChange" data-field="unit" range-key="name" value="{{selectIndex.unit}}" range="{{ranges.unit}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.unit[selectIndex.unit].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="course" title="课程" ext-class="">
+					<picker bindchange="bindPickerChange" data-field="course" range-key="name" value="{{selectIndex.course}}" range="{{ranges.course}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.course[selectIndex.course].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="type" title="题型" ext-class="">
+					<picker bindchange="bindPickerChange" range-key="name" data-field="type" value="{{selectIndex.type}}" range="{{ranges.type}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.type[selectIndex.type].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="difficulty" title="难度" ext-class="">
+					<picker bindchange="bindPickerChange" range-key="name" data-field="difficulty" value="{{selectIndex.difficulty}}" range="{{ranges.difficulty}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.difficulty[selectIndex.difficulty].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="tagIds" title="标签" ext-class="">
+					<picker bindchange="bindPickerChange" range-key="value" data-field="tagIds" value="{{selectIndex.tagIds}}" range="{{ranges.tagIds}}">
+						<view class="weui-select weui-select_in-select-after">{{ranges.tagIds[selectIndex.tagIds].value}}</view>
+					</picker>
+				</mp-cell>
+				<!-- <mp-cell show-error prop="type" title="题库" ext-class="">
+				<picker  bindchange="bindTypeChange" range-key="title" data-field="type" value="{{typeSelectIndex}}" range="{{typeRange}}">
+					<view class="weui-select weui-select_in-select-after">{{typeRange[typeSelectIndex].title}}</view>
+				</picker>
+			</mp-cell> -->
+			</mp-cells>
+		</mp-form>
+	</view>
+	<view class="bottomBtn">
+		<button type="primary" bindtap="submit">确定</button>
+	</view>
+</view>

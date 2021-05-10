@@ -1,0 +1,2 @@
+<!--pages/zuoye/filterPage/index.wxml-->
+<QuestionFilter defaultQuery="{{query}}" bindqueryDone="onFilterSure"/>

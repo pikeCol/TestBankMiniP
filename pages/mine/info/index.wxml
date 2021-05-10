@@ -1,0 +1,23 @@
+<!-- pages/mine/info/index.wxml -->
+<view class="header">
+		<view class="greeting">您好，{{userInfo.nick}}</view>
+		<view class="school">{{userInfo.school}}</view>
+		<!-- <view class="class">数学（七八九年级）物理（九年级）</view> -->
+</view>
+<!-- <mp-cells title=" ">
+
+	<mp-cell link hover value="快速出题">
+	</mp-cell>
+	<mp-cell link hover value="设置" bindtap="toSetting">
+	</mp-cell>
+</mp-cells> -->
+<mp-cells title=" ">
+		<mp-cell hover value="账户" footer="{{userInfo.id}}"></mp-cell>
+		<mp-cell bindtap="gotoPage" hover value="昵称" footer="{{userInfo.nick}}"></mp-cell>
+		<mp-cell link bindtap="gotoPage" hover value="手机" footer="{{userInfo.phone}}"></mp-cell>
+		<mp-cell bindtap="gotoPage" hover value="邮箱" footer="{{userInfo.mail}}"></mp-cell>
+		<mp-cell hover value="学校" footer="{{userInfo.school}}"></mp-cell>
+</mp-cells>
+<mp-cells title=" ">
+		<mp-cell link bindtap="gotoPage" hover value="科目/年级" footer="{{userInfo.subjectInfos}}"></mp-cell>
+</mp-cells>

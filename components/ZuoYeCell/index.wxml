@@ -1,0 +1,26 @@
+<!--components/ZuoYeCell/index.wxml-->
+<view class="cell-content">
+	<mp-cell>
+		<view slot="title" class="left">
+			<view class="title space">
+				<text>{{data.paperName}}</text>
+				<text>🌟</text>
+			</view>
+			<view class="des space">
+				<text>{{data.treeFullNames.splice("<")}}</text>
+			</view>
+			<view class="des">
+				<text>杭州学军中学</text>
+				<text>王老师</text>
+			</view>
+		</view>
+		<!-- <text>{{data.message}}</text> -->
+		<view slot="footer" class="right">
+
+			<view class="type space" wx:if="{{data.type === 1}}">试卷</view>
+			<view class="type space" wx:elif="{{data.type === 2}}">练习</view>
+			<view class="space"><text class="des">难度</text> <text class="num">{{data.difficultyLevel}}</text></view>
+			<view><text class="des">打印</text> <text class="num">{{data.printNum}}</text></view>
+		</view>
+	</mp-cell>
+</view>

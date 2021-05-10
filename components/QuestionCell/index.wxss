@@ -1,0 +1,31 @@
+/* components/QuestionCell/index.wxss */
+.question {
+  padding: 10px;
+  border-bottom: 1px dotted #D8D8D8;
+  background-color: white;
+}
+.tree{
+  font-size: 32rpx;
+  color:#969696
+}
+.tags {
+  display: flex;
+}
+
+.tag {
+  padding: 0 10px;
+  color: #09BB07;
+  border: 1px solid #09BB07;
+  font-size: 30rpx;
+  border-radius: 3px;
+}
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 35rpx;
+}
+.num {
+  color: #FF971E;
+  margin-right: 10rpx;
+}

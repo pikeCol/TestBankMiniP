@@ -1,0 +1,7 @@
+<!--pages/login/index.wxml-->
+<view class="content">
+<view class="logo">
+	<image src="../assets/login-logo.png" class="img-right"></image>
+</view>
+<button class="loginBtn"open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">关联手机号</button>
+</view>

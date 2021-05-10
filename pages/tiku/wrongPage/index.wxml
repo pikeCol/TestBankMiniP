@@ -1,0 +1,7 @@
+<!--pages/tiku/wrongPage/index.wxml-->
+<view class="wrong-area">
+	<textarea bindblur="bindTextAreaBlur" placeholder="这道题哪里有错误？请描述详细一点哦～" name="textarea" auto-height/>
+</view>
+<view class="tools">
+	<button size="mini" bindtap="support">提交</button>
+</view>

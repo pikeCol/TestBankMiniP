@@ -1,0 +1,22 @@
+<!--pages/components/zuoye/index.wxml-->
+<view class="content">
+	<view class="custom-navigation">
+		<text bindtap="changeListType" class="navigation-btn">{{!isMine ? "我的卷库" : "共享卷库"}}</text>
+		<text class="navigation-title">{{isMine ? "我的卷库" : "共享卷库"}}</text>
+		<text class="navigation-btn-right">共享卷库</text>
+	</view>
+
+	<view class="header" wx:if="{{list.length > 0}}">
+		<view class="btn" bindtap="toFilterPage">
+			<image src="../../assets/shaixuan.png" class=""></image>
+			筛选
+		</view>
+	</view>
+	
+	<PullScroll class="table" bindrefresh="refresh" bindloadMore="toLoad" refreshing="{{refreshing}}" showLoadMore="{{showLoadMore}}" loading="{{loading}}">
+		<zy-cell id="{{item.id}}" data-cell="{{item}}" wx:key="{{item.id}}" wx:for="{{list}}" data="{{item}}" class="cell" bindtap="cellTap">
+		</zy-cell>
+	</PullScroll>
+	<view class="addBtn" bindtap="toCreate">+</view>
+	
+</view>

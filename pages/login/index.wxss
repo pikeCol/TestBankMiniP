@@ -1,0 +1,21 @@
+/* pages/login/index.wxss */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.logo {
+  width:160rpx;
+  height: 160rpx;
+  margin-bottom: 200rpx;
+}
+.logo image {
+  width: 100%;
+  height: 100%;
+}
+.loginBtn {
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+  color: white;
+}

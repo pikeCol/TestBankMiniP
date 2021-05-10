@@ -1,0 +1,15 @@
+/* pages/mine/info/index.wxss */
+.header {
+  padding: 16px;
+}
+
+.header .greeting {
+  color: #FFB22B;
+  font-size: 34rpx;
+}
+
+.header .school,
+.header .class {
+  color: #969696;
+  font-size: 30rpx;
+}

@@ -1,0 +1,12 @@
+/* pages/zuoye/create/index.wxss */
+
+.weui-btn {
+  color: #FFFFFF;
+  font-size: 36rpx;
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+}
+.weui-select, .weui-input {
+  text-align: right;
+  padding-right: 20rpx;
+  width: auto;
+}

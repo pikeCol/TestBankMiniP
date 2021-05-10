@@ -1,0 +1,35 @@
+<!--pages/zuoye/selectQuesitons/index.wxml-->
+<view>
+	<view class="header">
+		<view class="btn" bindtap="toFilterPage">
+			<image src="../../assets/shaixuan.png" class=""></image>
+			筛选
+		</view>
+	</view>
+	<view class="bottomBtn">
+		<button bindtap="save">已选题目 {{selectIds.length}}</button>
+	</view>
+	<PullScroll class="center" bindrefresh="refresh" bindloadMore="toLoad" refreshing="{{refreshing}}" showLoadMore="{{showLoadMore}}" loading="{{loading}}">
+	<view wx:for="{{list}}" wx:for-item="question" class="question" data-index="{{index}}">
+			<rich-text nodes="{{question.question}}"></rich-text>
+			<rich-text wx:for="{{question.options}}" nodes="{{item}}"></rich-text>
+			<rich-text nodes="{{question.analysis}}"></rich-text>
+			<view class="tags">
+				<view wx:for="{{question.tags}}" class="tag">{{item.value}}</view>
+			</view>
+			<view class="line">
+				<text>{{contentEnum[question.type]}} * 难度{{question.difficultyLevel}}</text>
+				<view wx:if="{{question.selectType === 2}}">
+					<button size="mini" disabled="true">已被其他题目关联</button>
+				</view>
+				<view wx:elif="{{question.selectType === 1}}">
+					<button size="mini" bindtap="select" data-index="{{index}}">x 取消</button>
+				</view>
+				<view wx:else>
+					<button size="mini" bindtap="select" data-index="{{index}}">+ 选择</button>
+				</view>
+			</view>
+		</view>
+	</PullScroll>
+
+</view>

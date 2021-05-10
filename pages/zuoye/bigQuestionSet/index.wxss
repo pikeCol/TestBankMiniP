@@ -1,0 +1,6 @@
+/* pages/zuoye/bigQuestionSet/index.wxss */
+.weui-btn {
+  color: #FFFFFF;
+  font-size: 36rpx;
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+}

@@ -1,0 +1,12 @@
+<!-- pages/zuoye/paperSelect/index.wxml -->
+<view class="content">
+		<view class="weui-cells {{show ? 'hidden' : ''}}">
+				<mp-slideview wx:for="{{contents}}" data-index="{{index}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+						<mp-cell value="{{item.name}} （{{item.score || 0}}）分" footer="{{item.ids.length}}题" bindtap="cellTap" data-index="{{index}}"></mp-cell>
+				</mp-slideview>
+		</view>
+		<view class="bottom">
+				<button class="left" bindtap="addBig">新增大题</button>
+				<button class="right" bindtap="save">保存</button>
+		</view>
+</view>

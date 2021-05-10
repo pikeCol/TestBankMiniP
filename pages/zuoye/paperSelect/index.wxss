@@ -1,0 +1,30 @@
+/* pages/zuoye/paperSelect/index.wxss */
+.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 136rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bottom button {
+  height: 100%;
+  border-radius: 0;
+  font-size: 36rpx;
+  line-height: 136rpx;
+  padding: 0;
+}
+
+.bottom .left {
+  width: 65%;
+  color: #FFFFFF;
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+}
+
+.bottom .right {
+  width: 35%;
+  background-color: white;
+}
+

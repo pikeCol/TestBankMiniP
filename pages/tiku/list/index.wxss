@@ -1,0 +1,65 @@
+/* pages/zuoye/zuoye.wxss */
+.content {
+  height: 100%;
+  width: 100%;
+  clear: both;
+  overscroll-behavior: none;
+
+}
+
+.header {
+  /* height: 48rpx; */
+  /* position: fixed; */
+  /* top: 0;
+  left: 0;
+  right: 0; */
+}
+
+.header {
+  height: 68rpx;
+  padding: 0 20rpx;
+}
+
+.header .btn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header .btn image {
+  height: 20px;
+  width: 20px;
+}
+
+.table {
+  /* position: fixed; */
+  position: absolute;
+  /* top: 0rpx; */
+  top: 64rpx;
+  /* top: 181rpx; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.table .cell {
+  width: 100%;
+}
+
+.addBtn {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  color: white;
+  text-align: center;
+  line-height: 100rpx;
+
+}

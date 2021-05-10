@@ -1,0 +1,41 @@
+<!-- pages/mine/setting/index.wxml -->
+<view>
+		<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+		<mp-form id="form" rules="{{rules}}" models="{{userInfo}}">
+				<mp-cells title=" ">
+						<!-- <mp-cell hover value="账户" footer="{{userInfo.id}}"></mp-cell> -->
+						<!-- <mp-cell prop="nick" title="昵称">
+								<input bindinput="formInputChange" value="{{userInfo.nick}}" data-field="nick" class="weui-input" placeholder="请输入昵称" />
+						</mp-cell> -->
+						<!-- <mp-cell hover value="昵称" footer="{{userInfo.nick}}"></mp-cell> -->
+						<!-- <mp-cell hover value="手机" footer="{{userInfo.phone}}"></mp-cell> -->
+						<mp-cell prop="phone" title="手机号">
+								<input bindinput="formInputChange" value="{{userInfo.phone}}" data-field="phone" class="weui-input" placeholder="请输入手机号" />
+						</mp-cell>
+						<!-- <mp-cell hover value="邮箱" footer="{{userInfo.mail}}"></mp-cell> -->
+						<!-- <mp-cell prop="mail" title="邮箱">
+								<input bindinput="formInputChange" maxlength="40" value="{{userInfo.mail}}" data-field="mail" class="weui-input" placeholder="请输入邮箱" />
+						</mp-cell> -->
+						<!-- <mp-cell value="学校" footer="{{userInfo.school}}"></mp-cell> -->
+				</mp-cells>
+				<mp-cells title=" ">
+						<mp-cell link value="科目/年级">
+								<view slot="footer">
+										<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+												<view class="picker">
+														{{ multiArray[0][multiIndex[0]]}}>{{multiArray[1][multiIndex[1]]}}>{{multiArray[2][multiIndex[2]]}}
+												</view>
+										</picker>
+								</view>
+						</mp-cell>
+				</mp-cells>
+				<!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+						<view class="picker">
+								{{ multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}
+						</view>
+				</picker> -->
+		</mp-form>
+		<view class="weui-btn-area">
+				<button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+		</view>
+</view>

@@ -1,0 +1,50 @@
+<!--pages/zuoye/detail/index.wxml-->
+<view class="content">
+	<view class="header bottomLine">
+		<view class="line">
+			<view class="line no-padding">
+				<text class="type">{{typeEnum[detail.type]}}</text>
+				<text class="title">{{detail.paperName}}</text>
+			</view>
+			<text class="desc">时间</text>
+		</view>
+		<view class="line">
+
+			<text class="desc">{{detail.treeFullNames[0]}}</text>
+			<text class="desc">难度 {{detail.difficultyLevel}}</text>
+		</view>
+		<view class="line">
+			<text class="desc">{{detail.schoolName || '-'}} {{detail.createrName || '-'}}</text>
+			<text class="desc">打印 {{detail.printNum}}</text>
+		</view>
+	</view>
+	<view>
+		<mp-slideview wx:for="{{content}}" data-index="{{index}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+			<mp-cell value="{{item.name}} （{{item.score || 0}}）分" footer="{{item.ids.length}}题" bindtap="cellTap" data-index="{{index}}"></mp-cell>
+		</mp-slideview>
+		<!-- <collapse wx:for="{{content}}" contents="{{item.contents}}" title="{{item.key}}"  data-index="{{index}}" score="{{item.score}}" num="{{item.contents.length}}" bindtap="cellTap"/> -->
+	</view>
+	<view class="tools">
+		<block wx:if="{{isMine}}">
+			<button type="primary" size="mini" bindtap="addBig">+大题</button>
+
+
+			<!-- <button type="primary" size="mini" bindtap="toShare">共享</button> -->
+			<button type="primary" size="mini" bindtap="toEdit">编辑</button>
+			<button type="primary" size="mini" bindtap="save">保存</button>
+			<!-- <button type="warn" size="mini" bindtap="toDelete">删除</button> -->
+			<button size="mini" bindtap="showMore">更多 ></button>
+
+		</block>
+		<block wx:else>
+			<button wx:if="{{isCollect}}" type="primary" size="mini">收藏</button>
+			<button wx:else type="primary" size="mini"> 取消收藏</button>
+			<button type="primary" size="mini">打印</button>
+		</block>
+	</view>
+</view>
+<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" title="这是一个标题，可以为一行或者两行。">
+</mp-actionSheet>
+<mp-dialog title="" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>确定删除当前试卷/作业区吗？</view>
+    </mp-dialog>

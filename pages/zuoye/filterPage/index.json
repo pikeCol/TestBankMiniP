@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "QuestionFilter": "/components/QuestionFilter/index"
+  }
+}

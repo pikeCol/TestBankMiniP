@@ -1,0 +1,27 @@
+<!--components/Collapse/index.wxml-->
+<view class="content">
+	<view class="label" >
+		<view>
+			<text>{{title}}</text>
+			<text>（{{score}}分）</text>
+
+		</view>
+		<view class="right">
+			<text class="space">{{num}}题</text>
+			<view wx:if="{{show}}" class="img">
+				<image src="../../pages/assets/down.png" class="img-down"></image>
+			</view>
+			<view wx:else class="img">
+				<image src="../../pages/assets/right.png" class="img-right"></image>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{show}}" wx:for="{{contents}}" wx:for-item="question" class="question">
+		<rich-text nodes="{{question.question}}"></rich-text>
+		<rich-text wx:for="{{question.options}}" nodes="{{item}}"></rich-text>
+		<rich-text nodes="{{question.analysis}}"></rich-text>
+		<view class="tags">
+			<view wx:for="{{question.tags}}" class="tag">{{item.value}}</view>
+		</view>
+	</view>
+</view>

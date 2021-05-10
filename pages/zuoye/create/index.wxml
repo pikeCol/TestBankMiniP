@@ -1,0 +1,39 @@
+<!--pages/zuoye/create/index.wxml-->
+<view>
+	<view>
+		<mp-form id="form" rules="{{rules}}" models="{{formData}}">
+			<mp-cells>
+				<mp-cell show-error prop="paperName" title="名称*" ext-class="">
+					<input bindinput="formInputChange" data-field="paperName" class="weui-input" placeholder="请输入名称" value="{{formData.paperName}}" />
+				</mp-cell>
+				<mp-cell show-error prop="subject" title="科目*" ext-class="">
+					<picker bindchange="bindSubjectChange" data-field="subject" range-key="name" value="{{subjectIndex}}" range="{{subjectRange}}">
+						<view class="weui-select weui-select_in-select-after">{{subjectRange[subjectIndex].name}}</view>
+					</picker>
+				</mp-cell>
+
+				<mp-cell show-error prop="version" title="教材版本*" ext-class="">
+					<picker bindchange="bindVersionChange" data-field="version" range-key="name" value="{{versionIndex}}" range="{{versionRange}}">
+						<view class="weui-select weui-select_in-select-after">{{versionRange[versionIndex].name}}</view>
+					</picker>
+				</mp-cell>
+				<mp-cell show-error prop="class" title="年级*" ext-class="">
+					<picker bindchange="bindClassChange" data-field="class" range-key="name" value="{{classIndex}}" range="{{classRange}}">
+						<view class="weui-select weui-select_in-select-after">{{classRange[classIndex].name}}</view>
+					</picker>
+				</mp-cell>
+				<!-- <mp-cell show-error prop="type" title="类型*" ext-class="">
+					<picker bindchange="bindTypeChange" range-key="title" data-field="type" value="{{typeSelectIndex}}" range="{{typeRange}}">
+						<view class="weui-select weui-select_in-select-after">{{typeRange[typeSelectIndex].title}}</view>
+					</picker>
+				</mp-cell> -->
+			</mp-cells>
+		</mp-form>
+	</view>
+	<view class="bottomBtn">
+		<button wx:if="{{!detailData}}" type="primary" bindtap="submitForm">+ 选题</button>
+		<button wx:else type="primary" bindtap="update">保存</button>
+
+	</view>
+
+</view>

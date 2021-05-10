@@ -1,0 +1,43 @@
+/* pages/zuoye/bigQuetionDetail/index.wxss */
+.question {
+  padding: 10px;
+  border-bottom: 1px dotted #D8D8D8;
+  background-color: white;
+}
+
+ .tags {
+  display: flex;
+}
+
+.tag {
+  padding: 0 10px;
+  color: #09BB07;
+  border: 1px solid #09BB07;
+  font-size: 30rpx;
+  border-radius: 3px;
+}
+.content {
+  position: relative;
+}
+
+.content .filter {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 6;
+  float: left;
+  overflow: auto;
+}
+.hidden {
+  visibility: hidden;
+}
+.content .list {
+  position: relative;
+  z-index: 1;
+}
+.content .bottomBtn {
+  z-index: 2;
+}

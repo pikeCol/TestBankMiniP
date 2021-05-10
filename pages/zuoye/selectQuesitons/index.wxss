@@ -1,0 +1,83 @@
+/* pages/zuoye/selectQuesitons/index.wxss */
+.header {
+  height: 68rpx;
+  padding: 0 20rpx;
+}
+
+.header .btn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header .btn image {
+  height: 20px;
+  width: 20px;
+}
+
+.question {
+  padding: 10px;
+  border-bottom: 1px dotted #D8D8D8;
+  background-color: white;
+}
+
+.tags {
+  display: flex;
+}
+
+.tag {
+  padding: 0 10px;
+  color: #09BB07;
+  border: 1px solid #09BB07;
+  font-size: 30rpx;
+  border-radius: 3px;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 136rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bottom button {
+  height: 100%;
+  border-radius: 5rpx;
+  font-size: 36rpx;
+  line-height: 136rpx;
+  padding: 0;
+  color: #FFFFFF;
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+}
+
+.center .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+
+}
+
+.center .line button {
+  color: #FFFFFF;
+  background: linear-gradient(to right top, #FF971E, #FFB22B);
+  font-size: 30rpx;
+}
+
+.center {
+  overflow: auto;
+  position: fixed;
+  top: 68rpx;
+  left: 0;
+  right: 0;
+  bottom: 136rpx;
+}
+
+.weui-slideview {
+  height: auto !important;
+}
