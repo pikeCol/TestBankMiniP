@@ -24,23 +24,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(getApp().globalData.userInfo);
+  },
+
+  onShow: function () {
     this.setData({
       userInfo: getApp().globalData.userInfo
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    console.log(this.selectComponent("#list"))
   },
 
   /**
@@ -147,7 +137,7 @@ Page({
         pageNum,
         pageSize,
         status: 6,
-        leafNodeIds: this.data.userInfo.grades && this.data.userInfo.grades[0],
+        leafNodeIds: this.data.userInfo.grades && this.data.userInfo.grades.length > 0 ? this.data.userInfo.grades[0] : '',
         ...query
       }).then(res => {
         console.log(callKey, res)
