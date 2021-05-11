@@ -1,7 +1,8 @@
 const { request } = require("./basic")
 const getSubjectTree = (params) => {
   return request({
-    url: 'v1/subjectDictionary/directories',
+    url: 'v1/subjectDictionary/authority/directories',
+    // url: 'v1/subjectDictionary/directories',
     method: 'GET',
     data: params
   })
