@@ -245,7 +245,7 @@ Page({
         }
       },
       events: {
-        oncontentChange: function (content) {
+        onContentsChange: function (content) {
           console.log(content)
           self.data.content[index].ids = content
           self.setData({

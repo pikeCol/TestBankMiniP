@@ -154,6 +154,7 @@ Page({
         acceptDataFromOpenedPage: function (data) {
           self.loadContents(data)
           eventChannel.emit("onContentsChange", data)
+          console.log('onContentsChange', data, eventChannel);
           self.setData({
             selectIds: data
           })
