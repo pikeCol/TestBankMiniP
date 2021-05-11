@@ -127,7 +127,7 @@ Component({
         if (valid) {
           // const {subject, version, class, course} = this.data.formData
           const formData = this.data.formData
-          const leafNodeIds = formData.course || formData.unit || formData.class || formData.version || formData.subject || ''
+          // const leafNodeIds = formData.course || formData.unit || formData.class || formData.version || formData.subject || ''
           // let filtersData = {}
           // for (let k in formData) {
           //     filtersData[k] = formData[k]
@@ -135,7 +135,7 @@ Component({
           // console.log(filtersData, formData);
           this.triggerEvent("queryDone", {
             ...formData,
-            leafNodeIds,
+            // leafNodeIds,
           })
         }
       })

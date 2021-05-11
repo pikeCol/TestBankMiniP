@@ -15,6 +15,7 @@ Page({
     }],
     error: '',
     showTopTips: false,
+    options: {},
     gradeData: [],
     multiArray: [[],[],[]],
     multiIndex: [0,0,0],
@@ -27,63 +28,67 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
     const userInfo = getApp().globalData.userInfo
     this.setData({
-      userInfo: userInfo
+      userInfo: userInfo,
+      options
     })
-    getGradeList().then(res => {
-      if (res.code < 300) {
-        const {nodeIds} = userInfo
-        const subIds = nodeIds[0]
-        let gradeIndex = 0
-        const subjectList = [] // 科目
-        let versionList = {} // 教材版本
-        let gradeList = {} // 年级 
-        let gradeData = [] // 年级 
-        res.data.forEach(v => {
-          if (subIds[0] === v.id) {
-            
-            subjectList.push(v.name)
-            versionList[v.name] = []
-
-            if (v.children && v.children.length) {
-              // 版本循环
-              v.children.forEach(j => {
-                if (subIds[1] === j.id) {
-                  
-                  versionList[v.name].push(j.name)
-                  gradeList[j.name] = []
-                  // 年级
-                  if (j.children && j.children.length) {
-                    j.children.forEach((k, index) => {
-                      // 获取第几行
-                      if (subIds[2] === k.id) {
-                        gradeIndex = index
-                      }
-                      gradeList[j.name].push(k.name)
-                      gradeData.push(k)
-                    })
+    if (options.type === 'subject') {      
+      getGradeList().then(res => {
+        if (res.code < 300) {
+          const {nodeIds} = userInfo
+          const subIds = nodeIds[0]
+          let gradeIndex = 0
+          const subjectList = [] // 科目
+          let versionList = {} // 教材版本
+          let gradeList = {} // 年级 
+          let gradeData = [] // 年级 
+          res.data.forEach(v => {
+            if (subIds[0] === v.id) {
+              
+              subjectList.push(v.name)
+              versionList[v.name] = []
+  
+              if (v.children && v.children.length) {
+                // 版本循环
+                v.children.forEach(j => {
+                  if (subIds[1] === j.id) {
+                    
+                    versionList[v.name].push(j.name)
+                    gradeList[j.name] = []
+                    // 年级
+                    if (j.children && j.children.length) {
+                      j.children.forEach((k, index) => {
+                        // 获取第几行
+                        if (subIds[2] === k.id) {
+                          gradeIndex = index
+                        }
+                        gradeList[j.name].push(k.name)
+                        gradeData.push(k)
+                      })
+                    }
                   }
-                }
-
-              })
+  
+                })
+              }
             }
-          }
-        })
-
-        this.data.multiArray[0] = subjectList
-        this.data.multiArray[1] = this.getArr(subjectList[0], versionList)
-        this.data.multiArray[2] = this.getArr(this.data.multiArray[1][0], gradeList)
-        this.setData({
-          multiArray: this.data.multiArray,
-          gradeData: gradeData,
-          multiIndex: [0,0, gradeIndex]
-        })
-
-
-        console.log(versionList, gradeList, subjectList);
-      }
-    })
+          })
+  
+          this.data.multiArray[0] = subjectList
+          this.data.multiArray[1] = this.getArr(subjectList[0], versionList)
+          this.data.multiArray[2] = this.getArr(this.data.multiArray[1][0], gradeList)
+          this.setData({
+            multiArray: this.data.multiArray,
+            gradeData: gradeData,
+            multiIndex: [0,0, gradeIndex]
+          })
+  
+  
+          console.log(versionList, gradeList, subjectList);
+        }
+      })
+    }
   },
 
   bindMultiPickerColumnChange(e) {

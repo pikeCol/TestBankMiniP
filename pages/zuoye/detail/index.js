@@ -48,10 +48,11 @@ Page({
         type: 'warn',
       }
     ],
-    groups: [{
-        text: '共享',
-        value: 1
-      },
+    groups: [
+      // {
+      //   text: '共享',
+      //   value: 1
+      // },
       // {
       //   text: '打印',
       //   value: 2

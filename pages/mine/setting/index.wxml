@@ -2,7 +2,7 @@
 <view>
 		<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
 		<mp-form id="form" rules="{{rules}}" models="{{userInfo}}">
-				<mp-cells title=" ">
+				<mp-cells wx:if="{{options.type === 'phone'}}" title=" ">
 						<!-- <mp-cell hover value="账户" footer="{{userInfo.id}}"></mp-cell> -->
 						<!-- <mp-cell prop="nick" title="昵称">
 								<input bindinput="formInputChange" value="{{userInfo.nick}}" data-field="nick" class="weui-input" placeholder="请输入昵称" />
@@ -18,7 +18,7 @@
 						</mp-cell> -->
 						<!-- <mp-cell value="学校" footer="{{userInfo.school}}"></mp-cell> -->
 				</mp-cells>
-				<mp-cells title=" ">
+				<mp-cells wx:if="{{options.type === 'subject'}}" title=" ">
 						<mp-cell link value="科目/年级">
 								<view slot="footer">
 										<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">

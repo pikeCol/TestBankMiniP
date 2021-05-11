@@ -65,9 +65,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-  gotoPage: function () {
+  gotoPage: function (event) {
     wx.navigateTo({
-      url: '/pages/mine/setting/index',
+      url: '/pages/mine/setting/index?type=' + event.currentTarget.dataset.type,
     })
   }
 })

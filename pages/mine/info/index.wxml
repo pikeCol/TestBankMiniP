@@ -13,11 +13,11 @@
 </mp-cells> -->
 <mp-cells title=" ">
 		<mp-cell hover value="账户" footer="{{userInfo.id}}"></mp-cell>
-		<mp-cell bindtap="gotoPage" hover value="昵称" footer="{{userInfo.nick}}"></mp-cell>
-		<mp-cell link bindtap="gotoPage" hover value="手机" footer="{{userInfo.phone}}"></mp-cell>
-		<mp-cell bindtap="gotoPage" hover value="邮箱" footer="{{userInfo.mail}}"></mp-cell>
+		<mp-cell hover value="昵称" footer="{{userInfo.nick}}"></mp-cell>
+		<mp-cell link bindtap="gotoPage" data-type="phone" hover value="手机" footer="{{userInfo.phone}}"></mp-cell>
+		<mp-cell hover value="邮箱" footer="{{userInfo.mail}}"></mp-cell>
 		<mp-cell hover value="学校" footer="{{userInfo.school}}"></mp-cell>
 </mp-cells>
 <mp-cells title=" ">
-		<mp-cell link bindtap="gotoPage" hover value="科目/年级" footer="{{userInfo.subjectInfos}}"></mp-cell>
+		<mp-cell link bindtap="gotoPage" data-type="subject" hover value="科目/年级" footer="{{userInfo.subjectInfos}}"></mp-cell>
 </mp-cells>
