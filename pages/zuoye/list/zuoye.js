@@ -137,7 +137,7 @@ Page({
         pageNum,
         pageSize,
         status: 6,
-        leafNodeIds: this.data.userInfo.grades && this.data.userInfo.grades.length > 0 ? this.data.userInfo.grades[0] : '',
+        // leafNodeIds: this.data.userInfo.grades && this.data.userInfo.grades.length > 0 ? this.data.userInfo.grades[0] : '',
         ...query
       }).then(res => {
         console.log(callKey, res)
