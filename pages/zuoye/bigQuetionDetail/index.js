@@ -130,6 +130,9 @@ Page({
       detail: user.defaultQuery || {}
     })
   },
+  goback: function() {
+    wx.navigateBack();
+  },
   onFilterSure: function (e) {
     console.log(e)
     let self = this

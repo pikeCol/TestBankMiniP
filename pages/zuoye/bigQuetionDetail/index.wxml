@@ -1,21 +1,22 @@
 <!-- pages/zuoye/bigQuetionDetail/index.wxml -->
 <view class="content">
-	<QuestionFilter class="filter  {{show ? '' : 'hidden'}}" bindqueryDone="onFilterSure" />
-	<view class="{{show ? 'hidden' : ''}}">
-		<view class="list">
-			<mp-slideview wx:for="{{contents}}" wx:for-item="question" data-index="{{index}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
-				<view class="question">
-					<rich-text nodes="{{question.question}}"></rich-text>
-					<rich-text wx:for="{{question.options}}" nodes="{{item}}"></rich-text>
-					<rich-text nodes="{{question.analysis}}"></rich-text>
-					<view class="tags">
-						<view wx:for="{{question.tags}}" class="tag">{{item.value}}</view>
-					</view>
+		<QuestionFilter class="filter  {{show ? '' : 'hidden'}}" bindqueryDone="onFilterSure" />
+		<view class="{{show ? 'hidden' : ''}}">
+				<view class="list">
+						<mp-slideview wx:for="{{contents}}" wx:for-item="question" data-index="{{index}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+								<view class="question">
+										<rich-text nodes="{{question.question}}"></rich-text>
+										<rich-text wx:for="{{question.options}}" nodes="{{item}}"></rich-text>
+										<rich-text nodes="{{question.analysis}}"></rich-text>
+										<view class="tags">
+												<view wx:for="{{question.tags}}" class="tag">{{item.value}}</view>
+										</view>
+								</view>
+						</mp-slideview>
 				</view>
-			</mp-slideview>
+				<view class="bottomBtn btn2">
+						<button type="primary" class="choose" bindtap="showFilter">选题</button>
+						<button class="goback" bindtap="goback">返回</button>
+				</view>
 		</view>
-		<view class="bottomBtn">
-			<button type="primary" bindtap="showFilter">选题</button>
-		</view>
-	</view>
 </view>

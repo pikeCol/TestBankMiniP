@@ -41,3 +41,18 @@
 .content .bottomBtn {
   z-index: 2;
 }
+.bottomBtn.btn2 {
+  display: flex;
+  padding: 0;
+}
+.bottomBtn.btn2  .choose {
+  flex: 1;
+  border-radius: 0;
+}
+
+page .bottomBtn.btn2  .goback {
+  border-radius: 0 !important;
+  width: 200rpx !important;
+  background: #fff !important;
+  color: #000 !important;
+}
